@@ -6,7 +6,7 @@
 
 Bring the IT Crowd's Bluffball application to life.
 
-### Aim
+### Tech stack
 
 React
 
