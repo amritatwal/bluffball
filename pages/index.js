@@ -39,10 +39,11 @@ export default function Home() {
         </Flex>
         <Flex flexDirection="column" ml="3em">
           <Box mb=".5em">
-              <PrimaryButton text="get started" size={"lg"} route={"/register"} />
+            <PrimaryButton text="get started" size={"lg"} route={"/register"} />
           </Box>
-          <SecondaryButton text="jump back in" size={"lg"} />
+          <SecondaryButton text="jump back in" size={"lg"} route={""} />
         </Flex>
+        <a href="api/auth/login">hello</a>
       </Flex>
     </>
   );
