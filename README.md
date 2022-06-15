@@ -23,6 +23,3 @@ React, Auth0, Chakra UI, Next
 
 The API serving the application can be found [here](https://github.com/amritatwal/bluffballapi).
 
-TODO:
-- Add hi-fi prototypes
-- Finish readme.md
