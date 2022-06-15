@@ -1,20 +1,21 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
-const PrimaryButton = ({ text }) => {
+const PrimaryButton = ({ text, size, route }) => {
   return (
     <>
       <Button
         fontFamily="Poppins"
         bg="#53DB68"
+        size={size}
         color="#FFFFFF"
-        borderRadius="12px"
+        borderRadius="25px"
         border="none"
-        letterSpacing="1px"
-        size={"sm"}
+        letterSpacing="2px"
         textTransform="uppercase"
       >
-        {text}
+        <Link href={route}>{text}</Link>
       </Button>
     </>
   );
