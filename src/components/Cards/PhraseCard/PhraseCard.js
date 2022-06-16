@@ -5,13 +5,7 @@ import Header from "../../Text/Header/header";
 const PhraseCard = ({ quote, club }) => {
   console.log(quote);
   return (
-    <Flex justifyContent="center" alignItems="center" h="50em" mt="-5em">
-      {/* <img
-        width="50em"
-        height="auto"
-        src={"https://svgshare.com/i/iM7.svg"}
-        alt="previous"
-      /> */}
+    <Flex justifyContent="center" alignItems="center" h="100%">
       <Box
         m="1em"
         px="3em"
@@ -73,12 +67,6 @@ const PhraseCard = ({ quote, club }) => {
           </Box>
         </Flex>
       </Box>
-      {/* <img
-        width="50em"
-        height="auto"
-        src={"https://svgshare.com/i/iNM.svg"}
-        alt="next"
-      /> */}
     </Flex>
   );
 };

@@ -4,33 +4,10 @@ import PhraseCard from "../src/components/Cards/PhraseCard/PhraseCard";
 import { Text, Flex, Box, Spacer } from "@chakra-ui/react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import Carousel from "../src/components/Carousel/carousel";
 
 const Feed = () => {
   const [phrases, setPhrases] = useState([]);
-
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 1 },
-    1024: { items: 1 },
-  };
-
-  const items = [
-    <PhraseCard
-      key={phrases[0].phrase_id}
-      quote={phrases[0].phrase_desc}
-      club={phrases[0].phrase_club}
-    />,
-    <PhraseCard
-      key={phrases[1].phrase_id}
-      quote={phrases[1].phrase_desc}
-      club={phrases[1].phrase_club}
-    />,
-    <PhraseCard
-      key={phrases[1].phrase_id}
-      quote={phrases[1].phrase_desc}
-      club={phrases[1].phrase_club}
-    />,
-  ];
 
   useEffect(() => {
     async function getPhrases() {
@@ -43,9 +20,9 @@ const Feed = () => {
   }, []);
 
   return (
-    <>
-      <AliceCarousel mouseTracking items={items} responsive={responsive} />
-    </>
+    <Box h="100vh">
+      {phrases.length > 1 ? <Carousel phrases={phrases} /> : <></>}
+    </Box>
   );
 };
 
