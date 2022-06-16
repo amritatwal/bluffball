@@ -5,13 +5,13 @@ import Header from "../../Text/Header/header";
 const PhraseCard = ({ quote, club }) => {
   console.log(quote);
   return (
-    <Flex justifyContent="center" alignItems="center" height="100vh" mt="-5em">
-      <img
+    <Flex justifyContent="center" alignItems="center" h="50em" mt="-5em">
+      {/* <img
         width="50em"
         height="auto"
         src={"https://svgshare.com/i/iM7.svg"}
         alt="previous"
-      />
+      /> */}
       <Box
         m="1em"
         px="3em"
@@ -52,19 +52,19 @@ const PhraseCard = ({ quote, club }) => {
               justifyContent={"space-evenly"}
             >
               <img
-                width="50em"
+                width="25em"
                 height="auto"
                 src={"https://svgshare.com/i/iNL.svg"}
                 alt="ellipsis"
               />
               <img
-                width="50em"
+                width="45em"
                 height="auto"
                 src={"https://svgshare.com/i/iMz.svg"}
                 alt="sound"
               />
               <img
-                width="50em"
+                width="25em"
                 height="auto"
                 src={"https://svgshare.com/i/iN6.svg"}
                 alt="heart"
@@ -73,12 +73,12 @@ const PhraseCard = ({ quote, club }) => {
           </Box>
         </Flex>
       </Box>
-      <img
+      {/* <img
         width="50em"
         height="auto"
         src={"https://svgshare.com/i/iNM.svg"}
         alt="next"
-      />
+      /> */}
     </Flex>
   );
 };
