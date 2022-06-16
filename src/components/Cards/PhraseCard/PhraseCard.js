@@ -1,11 +1,17 @@
 import React from "react";
-import { Text, Flex, Box } from "@chakra-ui/react";
+import { Text, Flex, Box, Spacer } from "@chakra-ui/react";
 import Header from "../../Text/Header/header";
 
 const PhraseCard = ({ quote, club }) => {
   console.log(quote);
   return (
-    <Flex justifyContent="center" alignItems="center">
+    <Flex justifyContent="center" alignItems="center" height="100vh" mt="-5em">
+      <img
+        width="50em"
+        height="auto"
+        src={"https://svgshare.com/i/iM7.svg"}
+        alt="previous"
+      />
       <Box
         m="1em"
         px="3em"
@@ -25,7 +31,7 @@ const PhraseCard = ({ quote, club }) => {
               {club}
             </Text>
           </Box>
-          <Flex py="2em" display="flex" bg="pink" px="1em">
+          <Flex py="2em" display="flex" px="1em">
             <Header
               fontSize={"3em"}
               text={quote}
@@ -33,11 +39,46 @@ const PhraseCard = ({ quote, club }) => {
               colour="#333232"
             />
           </Flex>
-          <Box my="2em" w="100%" borderTop={"solid 1px #e1e1e1"}>
-            hello
+          <Box
+            my="2em"
+            pt="2em"
+            w="100%"
+            h="6em"
+            borderTop={"solid 1px #e1e1e1"}
+          >
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent={"space-evenly"}
+            >
+              <img
+                width="50em"
+                height="auto"
+                src={"https://svgshare.com/i/iNL.svg"}
+                alt="ellipsis"
+              />
+              <img
+                width="50em"
+                height="auto"
+                src={"https://svgshare.com/i/iMz.svg"}
+                alt="sound"
+              />
+              <img
+                width="50em"
+                height="auto"
+                src={"https://svgshare.com/i/iN6.svg"}
+                alt="heart"
+              />
+            </Flex>
           </Box>
         </Flex>
       </Box>
+      <img
+        width="50em"
+        height="auto"
+        src={"https://svgshare.com/i/iNM.svg"}
+        alt="next"
+      />
     </Flex>
   );
 };
