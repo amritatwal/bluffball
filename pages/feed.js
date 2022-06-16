@@ -1,50 +1,55 @@
 import React, { useState, useEffect } from "react";
 import config from "../config";
-import PhraseCard from "../src/components/Cards/PhraseCard/PhraseCard";
-import { Text, Flex, Box, Spacer } from "@chakra-ui/react";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import { Flex, Box, Progress } from "@chakra-ui/react";
 import Carousel from "../src/components/Carousel/carousel";
 
 const Feed = () => {
   const [phrases, setPhrases] = useState([]);
+  const [status, setStatus] = useState();
 
   useEffect(() => {
     async function getPhrases() {
       const response = await fetch(`${config.API_URL}/phrases`);
       const data = await response.json();
       setPhrases(data.payload);
-      console.log(phrases);
     }
     getPhrases();
   }, []);
 
+  function updateProgressBar(item) {
+    console.log(item, phrases.length);
+    setStatus(item + 1);
+  }
+
   return (
     <Box h="100vh">
-      {phrases.length > 1 ? <Carousel phrases={phrases} /> : <></>}
+      {phrases.length > 1 ? (
+        <>
+          <Box
+            display="flex"
+            mt="4em"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Progress
+              value={status}
+              min={1}
+              max={phrases.length}
+              w="50em"
+              borderRadius="25px"
+              h="2em"
+              size="xs"
+              colorScheme="green"
+            />
+          </Box>
+          <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
+          <Carousel phrases={phrases} updateProgressBar={updateProgressBar} />
+        </>
+      ) : (
+        <></>
+      )}
     </Box>
   );
 };
 
 export default Feed;
-
-// <>
-/* {phrases.length > 1 ? (
-        phrases.map((phrase) => {
-          return (
-            <PhraseCard key={phrase.phrase_id} quote={phrase.phrase_desc} />
-          );
-        })
-      ) : (
-        <></>
-      )} */
-/* {phrases.length > 1 ? (
-        <PhraseCard
-          key={phrases[0].phrase_id}
-          quote={phrases[0].phrase_desc}
-          club={phrases[0].phrase_club}
-        />
-      ) : (
-        <></>
-      )}
-    </> */

@@ -3,7 +3,6 @@ import { Text, Flex, Box, Spacer } from "@chakra-ui/react";
 import Header from "../../Text/Header/header";
 
 const PhraseCard = ({ quote, club }) => {
-  console.log(quote);
   return (
     <Flex justifyContent="center" alignItems="center" h="100%">
       <Box

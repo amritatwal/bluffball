@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PhraseCard from "../Cards/PhraseCard/PhraseCard";
-import { Text, Flex, Box, Spacer } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-const Carousel = ({ phrases }) => {
+const Carousel = ({ phrases, updateProgressBar }) => {
   const responsive = {
     0: { items: 1 },
     568: { items: 1 },
@@ -19,10 +19,14 @@ const Carousel = ({ phrases }) => {
     />
   ));
 
+  const onSlideChanged = (e) => {
+    updateProgressBar(e.item);
+  };
+
   const renderPrevButton = ({ isDisabled }) => {
     return (
       <span style={{ opacity: isDisabled ? "0.5" : 1 }}>
-        <Box className="b-refs-buttons" mt="2em">
+        <Box className="b-refs-buttons" mt="2em" mx="2em">
           <button>
             <img
               width="50em"
@@ -39,13 +43,13 @@ const Carousel = ({ phrases }) => {
   const renderNextButton = ({ isDisabled }) => {
     return (
       <span style={{ opacity: isDisabled ? "0.5" : 1 }}>
-        <Box className="b-refs-buttons" mt="2em">
+        <Box className="b-refs-buttons" mt="2em" mx="2em">
           <button>
             <img
               width="50em"
               height="auto"
               src={"https://svgshare.com/i/iNM.svg"}
-              alt="previous"
+              alt="next"
             />
           </button>
         </Box>
@@ -54,16 +58,17 @@ const Carousel = ({ phrases }) => {
   };
 
   return (
-    <Box h="100%" display="flex" mt="-5em">
+    <Box h="100%" display="flex" mt="-15em">
       {phrases.length > 1 ? (
         <AliceCarousel
-          border={"solid 1px blue"}
           mouseTracking
           items={items}
           responsive={responsive}
           disableDotsControls
+          disableSlideInfo={true}
           renderPrevButton={renderPrevButton}
           renderNextButton={renderNextButton}
+          onSlideChanged={onSlideChanged}
         />
       ) : (
         <></>
