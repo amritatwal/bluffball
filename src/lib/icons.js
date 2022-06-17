@@ -1,7 +1,7 @@
 const icons = [
   {
     club: "Arsenal",
-    src: "https://svgshare.com/i/iPz.svg",
+    src: "https://svgshare.com/i/iPL.svg",
   },
   {
     club: "Chelsea",

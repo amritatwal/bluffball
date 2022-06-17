@@ -1,11 +1,11 @@
-import React, from "react";
+import React from "react";
 import { Text, Flex, Box, Image } from "@chakra-ui/react";
 import Header from "../../Text/Header/header";
+import Share from "../../Buttons/Share/share";
 import icons from "../../../lib/icons";
 
 const PhraseCard = ({ quote, club }) => {
   const icon = icons.find((icon) => icon.club === club);
-  if (icon) console.log(icon.src);
 
   return (
     <Flex justifyContent="center" alignItems="center" h="100%">
@@ -20,7 +20,11 @@ const PhraseCard = ({ quote, club }) => {
       >
         <Flex flexDirection="column" alignItems="center">
           <Box pt="1em" display="flex" flexDirection="row">
-            {icon ? <Image mr=".5em" w="1.1em" h="auto"src={icon.src}/> : <></>}
+            {icon ? (
+              <Image mr=".5em" w="1.1em" h="auto" src={icon.src} />
+            ) : (
+              <></>
+            )}
             <Text
               color="grey"
               fontWeight="700"
@@ -53,8 +57,8 @@ const PhraseCard = ({ quote, club }) => {
               <img
                 width="25em"
                 height="auto"
-                src={"https://svgshare.com/i/iNL.svg"}
-                alt="ellipsis"
+                src={"https://svgshare.com/i/iN6.svg"}
+                alt="heart"
               />
               <img
                 width="45em"
@@ -62,12 +66,7 @@ const PhraseCard = ({ quote, club }) => {
                 src={"https://svgshare.com/i/iMz.svg"}
                 alt="sound"
               />
-              <img
-                width="25em"
-                height="auto"
-                src={"https://svgshare.com/i/iN6.svg"}
-                alt="heart"
-              />
+              <Share />
             </Flex>
           </Box>
         </Flex>
