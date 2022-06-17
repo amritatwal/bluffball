@@ -14,9 +14,9 @@ const PhraseCard = ({ quote, club }) => {
         px="3em"
         borderRadius="25px"
         border={"solid 1px #e1e1e1"}
-        w="50em"
-        minH="20em"
-        maxH="30em"
+        w={{ base: "20em", md: "50em" }}
+        minH={{ base: "20em", md: "20em" }}
+        maxH={{ base: "30em", md: "30em" }}
       >
         <Flex flexDirection="column" alignItems="center">
           <Box pt="1em" display="flex" flexDirection="row">
@@ -34,9 +34,9 @@ const PhraseCard = ({ quote, club }) => {
               {club}
             </Text>
           </Box>
-          <Flex py="2em" display="flex" px="1em">
+          <Flex py={{ base: ".5em", md: "2em" }} display="flex" px="1em">
             <Header
-              fontSize={"3em"}
+              fontSize={{ base: "1.6em", md: "3em" }}
               text={quote}
               fontWeight="600"
               colour="#333232"
@@ -46,7 +46,7 @@ const PhraseCard = ({ quote, club }) => {
             my="2em"
             pt="2em"
             w="100%"
-            h="6em"
+            h={{ base: "5em", md: "6em" }}
             borderTop={"solid 1px #e1e1e1"}
           >
             <Flex

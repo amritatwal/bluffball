@@ -27,7 +27,7 @@ const Feed = () => {
         <>
           <Box
             display="flex"
-            mt="4em"
+            mt={{ base: "2em", md: "4em" }}
             alignItems="center"
             justifyContent="center"
           >

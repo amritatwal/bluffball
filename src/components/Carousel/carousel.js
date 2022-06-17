@@ -26,7 +26,11 @@ const Carousel = ({ phrases }) => {
   const renderPrevButton = ({ isDisabled }) => {
     return (
       <span style={{ opacity: isDisabled ? "0.3" : 1 }}>
-        <Box className="b-refs-buttons" mt="2em" mx="2em">
+        <Box
+          className="b-refs-buttons"
+          mt={{ base: "1em", md: "2em" }}
+          mx="2em"
+        >
           <button>
             <img
               width="50em"
@@ -43,7 +47,11 @@ const Carousel = ({ phrases }) => {
   const renderNextButton = ({ isDisabled }) => {
     return (
       <span style={{ opacity: isDisabled ? "0.3" : 1 }}>
-        <Box className="b-refs-buttons" mt="2em" mx="2em">
+        <Box
+          className="b-refs-buttons"
+          mt={{ base: "1em", md: "2em" }}
+          mx="2em"
+        >
           <button>
             <img
               width="50em"
@@ -58,7 +66,7 @@ const Carousel = ({ phrases }) => {
   };
 
   return (
-    <Box h="100%" display="flex" mt="-15em">
+    <Box h="100%" display="flex" mt={{ base: "-10em", md: "-15em" }}>
       {phrases.length > 1 ? (
         <AliceCarousel
           mouseTracking
