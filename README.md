@@ -1,10 +1,19 @@
 <p align="center">
   <img src="https://i.ibb.co/88LT8B6/bluffball.png" alt="bluffball logo"/>
+  
 </p>
+
+## Demo
+
+https://bluffball.netlify.app
 
 ### Aim
 
-Bring The IT Crowd's Bluffball fictional website to life!
+To combine my love for football and The IT Crowd by bringing the fictional website 'Bluffball' to life. As quoted [here](https://theitcrowd.fandom.com/wiki/BluffBall.co.uk), Bluffball is best described as a:
+
+> "British elocution website that teaches the user on how to speak and pronounce words like a football enthusiast"
+
+
 
 ### Prototypes 
 
@@ -22,4 +31,9 @@ React, Auth0, Chakra UI, Next
 ### API 
 
 The API serving the application can be found [here](https://github.com/amritatwal/bluffballapi).
+
+### Plan & Roadmap
+
+Jun 2022: First MVP achieved
+  - User can view phrases 
 
