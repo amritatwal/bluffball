@@ -17,7 +17,7 @@ To combine my love for football and The IT Crowd by bringing the fictional websi
 
 ### Prototypes 
 
-Prototypes for mobile were made with Figma. The application is being developed using a mobile-first approach and will be fully responsive for both desktop and mobile screens.
+Prototypes for mobile display were created in Figma. The application is being developed using a mobile-first approach and will be fully responsive for both desktop and mobile screens.
 
 ![Welcome](https://i.ibb.co/pzYYKcL/i-Phone-SE-3.png)
 ![Setup](https://i.ibb.co/mD8Shj9/i-Phone-SE-4.png)
