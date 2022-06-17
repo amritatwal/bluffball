@@ -1,8 +1,12 @@
-import React from "react";
-import { Text, Flex, Box, Spacer } from "@chakra-ui/react";
+import React, from "react";
+import { Text, Flex, Box, Image } from "@chakra-ui/react";
 import Header from "../../Text/Header/header";
+import icons from "../../../lib/icons";
 
 const PhraseCard = ({ quote, club }) => {
+  const icon = icons.find((icon) => icon.club === club);
+  if (icon) console.log(icon.src);
+
   return (
     <Flex justifyContent="center" alignItems="center" h="100%">
       <Box
@@ -11,10 +15,12 @@ const PhraseCard = ({ quote, club }) => {
         borderRadius="25px"
         border={"solid 1px #e1e1e1"}
         w="50em"
-        h="25em"
+        minH="20em"
+        maxH="30em"
       >
         <Flex flexDirection="column" alignItems="center">
-          <Box pt="1em">
+          <Box pt="1em" display="flex" flexDirection="row">
+            {icon ? <Image mr=".5em" w="1.1em" h="auto"src={icon.src}/> : <></>}
             <Text
               color="grey"
               fontWeight="700"

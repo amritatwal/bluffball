@@ -5,7 +5,7 @@ import Carousel from "../src/components/Carousel/carousel";
 
 const Feed = () => {
   const [phrases, setPhrases] = useState([]);
-  const [status, setStatus] = useState();
+  // const [index, setIndex] = useState();
 
   useEffect(() => {
     async function getPhrases() {
@@ -16,10 +16,10 @@ const Feed = () => {
     getPhrases();
   }, []);
 
-  function updateProgressBar(item) {
-    console.log(item, phrases.length);
-    setStatus(item + 1);
-  }
+  // function updateProgressBar(item) {
+  //   setIndex(item);
+  //   console.log(index);
+  // }
 
   return (
     <Box h="100vh">
@@ -31,19 +31,19 @@ const Feed = () => {
             alignItems="center"
             justifyContent="center"
           >
-            <Progress
-              value={status}
-              min={1}
+            {/* <Progress
+              value={index}
+              min={0}
               max={phrases.length}
               w="50em"
               borderRadius="25px"
               h="2em"
               size="xs"
               colorScheme="green"
-            />
+            /> */}
           </Box>
           <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
-          <Carousel phrases={phrases} updateProgressBar={updateProgressBar} />
+          <Carousel phrases={phrases} />
         </>
       ) : (
         <></>

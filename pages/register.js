@@ -13,7 +13,7 @@ export default function Register() {
         justifyContent="center"
         alignItems="center"
         my="2em"
-      >
+      s>
         <form method="post" action="/">
           <Text>1 of 4</Text>
           <legend>

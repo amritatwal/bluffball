@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-const Carousel = ({ phrases, updateProgressBar }) => {
+const Carousel = ({ phrases }) => {
   const responsive = {
     0: { items: 1 },
     568: { items: 1 },
@@ -19,13 +19,13 @@ const Carousel = ({ phrases, updateProgressBar }) => {
     />
   ));
 
-  const onSlideChanged = (e) => {
-    updateProgressBar(e.item);
-  };
+  // const onSlideChanged = (e) => {
+  //   updateProgressBar(e.item);
+  // };
 
   const renderPrevButton = ({ isDisabled }) => {
     return (
-      <span style={{ opacity: isDisabled ? "0.5" : 1 }}>
+      <span style={{ opacity: isDisabled ? "0.3" : 1 }}>
         <Box className="b-refs-buttons" mt="2em" mx="2em">
           <button>
             <img
@@ -42,7 +42,7 @@ const Carousel = ({ phrases, updateProgressBar }) => {
 
   const renderNextButton = ({ isDisabled }) => {
     return (
-      <span style={{ opacity: isDisabled ? "0.5" : 1 }}>
+      <span style={{ opacity: isDisabled ? "0.3" : 1 }}>
         <Box className="b-refs-buttons" mt="2em" mx="2em">
           <button>
             <img
@@ -62,13 +62,14 @@ const Carousel = ({ phrases, updateProgressBar }) => {
       {phrases.length > 1 ? (
         <AliceCarousel
           mouseTracking
+          infinite={false}
           items={items}
           responsive={responsive}
           disableDotsControls
           disableSlideInfo={true}
           renderPrevButton={renderPrevButton}
           renderNextButton={renderNextButton}
-          onSlideChanged={onSlideChanged}
+          // onSlideChanged={onSlideChanged}
         />
       ) : (
         <></>
