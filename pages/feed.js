@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import config from "../config";
-import { Flex, Box, Progress } from "@chakra-ui/react";
+import { Flex, Box, Button, Image } from "@chakra-ui/react";
 import Carousel from "../src/components/Carousel/carousel";
+import Link from "next/link";
 
 const Feed = () => {
   const [phrases, setPhrases] = useState([]);
@@ -22,16 +23,35 @@ const Feed = () => {
   // }
 
   return (
-    <Box h="100vh">
-      {phrases.length > 1 ? (
-        <>
-          <Box
-            display="flex"
-            mt={{ base: "2em", md: "4em" }}
-            alignItems="center"
-            justifyContent="center"
+    <>
+      <Box h="100vh" display="flex" flexDirection="column">
+        <Flex m=".8em" alignSelf={"flex-end"}>
+          <Button
+            bg="none"
+            py="1em"
+            _hover={"none"}
+            _after={"none"}
+            _visited={"none"}
+            _active={"none"}
           >
-            {/* <Progress
+            <Link href={"/"}>
+              <Image
+                w="1.7em"
+                src="https://svgshare.com/i/iQf.svg"
+                alt="close"
+              />
+            </Link>
+          </Button>
+        </Flex>
+        {phrases.length > 1 ? (
+          <>
+            <Box
+              display="flex"
+              mt={{ md: "4em" }}
+              alignItems="center"
+              justifyContent="center"
+            >
+              {/* <Progress
               value={index}
               min={0}
               max={phrases.length}
@@ -41,14 +61,15 @@ const Feed = () => {
               size="xs"
               colorScheme="green"
             /> */}
-          </Box>
-          <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
-          <Carousel phrases={phrases} />
-        </>
-      ) : (
-        <></>
-      )}
-    </Box>
+            </Box>
+            <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
+            <Carousel phrases={phrases} />
+          </>
+        ) : (
+          <></>
+        )}
+      </Box>
+    </>
   );
 };
 

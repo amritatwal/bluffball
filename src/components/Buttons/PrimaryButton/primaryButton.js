@@ -8,6 +8,9 @@ const PrimaryButton = ({ text, size, route }) => {
       <Button
         fontFamily="Poppins"
         bg="#53DB68"
+        _hover={"none"}
+        py="1em"
+        px={{ base: "1.3em", md: "3em" }}
         size={size}
         color="#FFFFFF"
         borderRadius="25px"

@@ -10,40 +10,35 @@ export default function Home() {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        m="0"
-        w="100vw"
+        w="100%"
         h="100vh"
-        flexDirection={{ base: "column", md: "row" }}
+        flexDirection={{ base: "column", md: "column" }}
       >
-        <Flex flexDirection={"column"}>
+        <Flex flexDirection={"column"} mb="5em">
           <Header
-            fontSize={{ base: "2em", md: "4em" }}
+            fontSize={{ base: "1.8em", md: "4em" }}
             text="It's your guide&nbsp;"
             fontWeight="400"
             color="#333232"
           />
           <Flex display="flex" flexDirection="row">
             <Header
-              fontSize={{ base: "2em", md: "4em" }}
+              fontSize={{ base: "1.8em", md: "4em" }}
               text="to&nbsp;"
               fontWeight="400"
               color="#333232"
             />
             <Header
-              fontSize={{ base: "2em", md: "4em" }}
+              fontSize={{ base: "1.8em", md: "4em" }}
               text="football parlance."
               fontWeight="800"
               color="#333232"
             />
           </Flex>
-        </Flex>
-        <Flex flexDirection="column" ml="3em">
-          <Box mb=".5em">
-            <PrimaryButton text="get started" size={"lg"} route={"/register"} />
+          <Box mt={{ base: "2em", md: "3.5em" }} alignSelf="center">
+            <PrimaryButton text={"Start"} size={"md"} route={"/feed"} />
           </Box>
-          <SecondaryButton text="jump back in" size={"lg"} route={""} />
         </Flex>
-        <a href="api/auth/login">hello</a>
       </Flex>
     </>
   );

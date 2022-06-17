@@ -11,7 +11,7 @@ const PhraseCard = ({ quote, club }) => {
     <Flex justifyContent="center" alignItems="center" h="100%">
       <Box
         m="1em"
-        px="3em"
+        px={{ base: "1em", md: "3em" }}
         borderRadius="25px"
         border={"solid 1px #e1e1e1"}
         w={{ base: "20em", md: "50em" }}
