@@ -6,8 +6,6 @@ import Link from "next/link";
 
 const Feed = () => {
   const [phrases, setPhrases] = useState([]);
-  // const [index, setIndex] = useState();
-
   useEffect(() => {
     async function getPhrases() {
       const response = await fetch(`${config.API_URL}/phrases`);
@@ -16,11 +14,6 @@ const Feed = () => {
     }
     getPhrases();
   }, []);
-
-  // function updateProgressBar(item) {
-  //   setIndex(item);
-  //   console.log(index);
-  // }
 
   return (
     <>
@@ -50,18 +43,7 @@ const Feed = () => {
               mt={{ md: "4em" }}
               alignItems="center"
               justifyContent="center"
-            >
-              {/* <Progress
-              value={index}
-              min={0}
-              max={phrases.length}
-              w="50em"
-              borderRadius="25px"
-              h="2em"
-              size="xs"
-              colorScheme="green"
-            /> */}
-            </Box>
+            ></Box>
             <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
             <Carousel phrases={phrases} />
           </>

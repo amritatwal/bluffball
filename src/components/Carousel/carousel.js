@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PhraseCard from "../Cards/PhraseCard/PhraseCard";
 import { Box } from "@chakra-ui/react";
 import AliceCarousel from "react-alice-carousel";
