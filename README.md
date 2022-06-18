@@ -5,7 +5,7 @@
 
 ## Demo
 
-https://bluffball.netlify.app
+First MVP currenly live here: https://bluffball.netlify.app
 
 ### Aim
 
