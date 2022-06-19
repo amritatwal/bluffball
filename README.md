@@ -37,3 +37,7 @@ The API serving the application can be found [here](https://github.com/amritatwa
 Jun 2022: First MVP achieved
   - User can view phrases 
 
+Next steps:
+  - Authenticate the user.
+  - Explore the issues surrounding the incorporation of a progress bar and its affect on the carousel.
+
