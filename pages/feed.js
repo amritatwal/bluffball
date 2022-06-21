@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import config from "../config";
-import { Flex, Box, Button, Image } from "@chakra-ui/react";
+import { Flex, Box, Button, Image, Spinner } from "@chakra-ui/react";
 import Carousel from "../src/components/Carousel/carousel";
 import Link from "next/link";
 
@@ -43,12 +43,15 @@ const Feed = () => {
               mt={{ md: "4em" }}
               alignItems="center"
               justifyContent="center"
-            ></Box>
-            <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
-            <Carousel phrases={phrases} />
+            >
+              <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
+              <Carousel phrases={phrases} />
+            </Box>
           </>
         ) : (
-          <></>
+          <>
+            <Spinner color={"#53DB68"} />
+          </>
         )}
       </Box>
     </>
