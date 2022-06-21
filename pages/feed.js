@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import config from "../config";
-import { Flex, Box, Button, Image, Spinner } from "@chakra-ui/react";
+import { Flex, Box, Button, Image, Spinner, calc } from "@chakra-ui/react";
 import Carousel from "../src/components/Carousel/carousel";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ const Feed = () => {
 
   return (
     <>
-      <Box h="100vh" display="flex" flexDirection="column">
+      <Box h={"calc(100vh - 8em)"} display="flex" flexDirection="column">
         <Flex m=".8em" alignSelf={"flex-end"}>
           <Button
             bg="none"

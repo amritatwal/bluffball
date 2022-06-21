@@ -10,10 +10,10 @@ export default function Home() {
         alignItems="center"
         justifyContent="center"
         w="100%"
-        h="100vh"
+        h={"calc(100vh - 8em)"}
         flexDirection={{ base: "column", md: "column" }}
       >
-        <Flex flexDirection={"column"} mb="5em">
+        <Flex flexDirection={"column"} mb="1em">
           <Header
             fontSize={{ base: "1.8em", md: "4em" }}
             text="It's your guide&nbsp;"

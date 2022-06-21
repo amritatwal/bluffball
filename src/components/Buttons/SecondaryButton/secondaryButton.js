@@ -15,7 +15,7 @@ const SecondaryButton = ({ text, size, route }) => {
         letterSpacing="1px"
         size={size}
         textTransform="uppercase"
-      >
+      >ƒ
         <Link href={route}>{text}</Link>
       </Button>
     </>

@@ -66,7 +66,7 @@ const Carousel = ({ phrases }) => {
   };
 
   return (
-    <Box h="100%" display="flex" mt={{ base: "-10em", md: "-15em" }}>
+    <Box w="100%" h="100%" display="flex" mt={{ base: "1em", md: "1em" }}>
       {phrases.length > 1 ? (
         <AliceCarousel
           mouseTracking

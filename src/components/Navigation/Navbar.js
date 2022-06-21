@@ -10,7 +10,15 @@ const Navbar = () => {
   return (
     <nav className={css.navbar}>
       {isTabletOrMobile ? (
-        <Flex flexDirection="row" justifyContent="center" py=".8em" px=".5em">
+        <Flex
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+          py=".8em"
+          px=".5em"
+          minHeight={"4em"}
+          maxHeight={"8em"}
+        >
           <Link href={"/"}>
             <Box cursor={"pointer"}>
               <Image
@@ -22,7 +30,14 @@ const Navbar = () => {
           </Link>
         </Flex>
       ) : (
-        <Flex flexDirection="row" py=".8em" px=".5em">
+        <Flex
+          flexDirection="row"
+          alignItems="center"
+          py=".8em"
+          px=".5em"
+          minHeight={"4em"}
+          maxHeight={"8em"}
+        >
           <Link href={"/"}>
             <Box cursor={"pointer"}>
               <Image
