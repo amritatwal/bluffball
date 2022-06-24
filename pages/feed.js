@@ -44,14 +44,11 @@ const Feed = () => {
               alignItems="center"
               justifyContent="center"
             >
-              <Flex alignItems="center" justifyContent="center" my="3em"></Flex>
               <Carousel phrases={phrases} />
             </Box>
           </>
         ) : (
-          <>
-            <Spinner color={"#53DB68"} />
-          </>
+          <></>
         )}
       </Box>
     </>

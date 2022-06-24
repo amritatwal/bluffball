@@ -1,8 +1,11 @@
 import { Flex, Box } from "@chakra-ui/react";
+import { useUser } from "@auth0/nextjs-auth0";
 import PrimaryButton from "../src/components/Buttons/PrimaryButton/primaryButton";
 import Header from "../src/components/Text/Header/header";
 
 export default function Home() {
+  const { user } = useUser();
+  console.log(user);
   return (
     <>
       <Flex
@@ -38,6 +41,11 @@ export default function Home() {
             <PrimaryButton text={"Start"} size={"md"} route={"/feed"} />
           </Box>
         </Flex>
+        {!user ? (
+          <a href="/api/auth/login">Login</a>
+        ) : (
+          <a href="/api/auth/logout">Log out</a>
+        )}
       </Flex>
     </>
   );
