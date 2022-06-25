@@ -7,12 +7,12 @@ const PrimaryButton = ({ text, route }) => {
     <>
       <Link href={route}>
         <Button
+          fontSize=".8em"
           fontFamily="Poppins"
           bg="#53DB68"
           _hover={"none"}
-          py="1em"
-          px={{ base: "1.3em", md: "3em" }}
-          w={{ base: "6em", md: "12em" }}
+          // px={{ base: "1.3em", md: "3em" }}
+          // w={{ base: "6em", md: "12em" }}
           color="#FFFFFF"
           borderRadius="25px"
           border="none"

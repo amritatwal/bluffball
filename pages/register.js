@@ -47,7 +47,7 @@ export default function Register() {
           option.
         </Alert>
         <form method="post" action="/">
-          <Text
+          {/* <Text
             color="lightgrey"
             fontSize=".9em"
             fontWeight="600"
@@ -56,14 +56,16 @@ export default function Register() {
             textTransform="uppercase"
           >
             1 of 4
-          </Text>
+          </Text> */}
           <legend>
-            <Header
-              fontSize="2em"
-              fontWeight="800"
-              colour="#53DB68"
-              text="Choose your teams"
-            />
+            <Box my="1em">
+              <Header
+                fontSize="2em"
+                fontWeight="800"
+                colour="#53DB68"
+                text="Choose your teams"
+              />
+            </Box>
           </legend>
           <RadioGroup>
             {teams.map((team, index) => {
@@ -84,7 +86,7 @@ export default function Register() {
           justifyContent="center"
           my="2em"
         >
-          <PrimaryButton text={"Continue"} route={"/"} />
+          <PrimaryButton text={"Let's go"} route={"/feed"} />
           <Link
             color="lightgrey"
             fontSize=".9em"

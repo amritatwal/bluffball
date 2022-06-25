@@ -1,14 +1,14 @@
 import React from "react";
-import css from "./Navbar.module.css";
 import { Flex, Image, Box } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
+import Menu from "../Menu/menu";
 
 const Navbar = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
-    <nav className={css.navbar}>
+    <nav>
       {isTabletOrMobile ? (
         <Flex
           flexDirection="row"
@@ -39,7 +39,7 @@ const Navbar = () => {
           maxHeight={"8em"}
         >
           <Link href={"/"}>
-            <Box cursor={"pointer"}>
+            <Box cursor={"pointer"} display="flex" flexGrow="1" ml="1em">
               <Image
                 src="https://i.ibb.co/wKxVnr2/68747470733a2f2f692e6962622e636f2f38384c543842362f626c75666662616c6c2e706e67.png"
                 alt="bluffball"
@@ -47,12 +47,13 @@ const Navbar = () => {
               />
             </Box>
           </Link>
+          <Box display="flex" px="1em">
+            <Menu />
+          </Box>
         </Flex>
       )}
     </nav>
   );
 };
-
-
 
 export default Navbar;

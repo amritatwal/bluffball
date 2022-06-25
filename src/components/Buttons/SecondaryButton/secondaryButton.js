@@ -8,9 +8,10 @@ const SecondaryButton = ({ text, route }) => {
       <Button
         fontFamily="Poppins"
         bg="none"
+        _hover="none"
         border="2px"
         borderColor="#53DB68"
-        color="#333232"
+        color="#5a5858"
         borderRadius="25px"
         letterSpacing="1px"
         textTransform="uppercase"
