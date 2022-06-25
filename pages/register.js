@@ -34,7 +34,7 @@ export default function Register() {
         my="2em"
       >
         <Alert
-          color="darkgrey"
+          color="#c6c6c6"
           background="#f5fdf6"
           fontSize=".9em"
           fontWeight="400"
@@ -44,7 +44,7 @@ export default function Register() {
         >
           <AlertIcon />
           Bluffball is still in beta mode so we are only offering Arsenal as an
-          option. Check back soon for more clubs!
+          option.
         </Alert>
         <form method="post" action="/">
           <Text
