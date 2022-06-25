@@ -1,6 +1,4 @@
 import { Flex, Box } from "@chakra-ui/react";
-import PrimaryButton from "../src/components/Buttons/PrimaryButton/primaryButton";
-import SecondaryButton from "../src/components/Buttons/SecondaryButton/secondaryButton";
 import Header from "../src/components/Text/Header/header";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import config from "../config";
-import { Flex, Box, Button, Image, Spinner, calc } from "@chakra-ui/react";
+import { Flex, Box, Button, Image } from "@chakra-ui/react";
 import Carousel from "../src/components/Carousel/carousel";
 import Link from "next/link";
 
