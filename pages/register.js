@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Text, Flex, Box } from "@chakra-ui/react";
+import {
+  Text,
+  Flex,
+  Box,
+  Link,
+  Badge,
+  AlertIcon,
+  Alert,
+} from "@chakra-ui/react";
 import Header from "../src/components/Text/Header/header";
 import TeamChoice from "../src/components/TeamChoice/teamChoice";
 import teams from "../src/lib/teams";
@@ -13,6 +21,10 @@ export default function Register() {
     setOptions([...options, choice]);
   }
 
+  function setAllOptions() {
+    console.log("Skip has been clicked on");
+  }
+
   return (
     <>
       <Flex
@@ -21,8 +33,30 @@ export default function Register() {
         alignItems="center"
         my="2em"
       >
+        <Alert
+          color="darkgrey"
+          background="#f5fdf6"
+          fontSize=".9em"
+          fontWeight="400"
+          my="1em"
+          status="info"
+          w="auto"
+        >
+          <AlertIcon />
+          Bluffball is still in beta mode so we are only offering Arsenal as an
+          option. Check back soon for more clubs!
+        </Alert>
         <form method="post" action="/">
-          <Text>1 of 4</Text>
+          <Text
+            color="lightgrey"
+            fontSize=".9em"
+            fontWeight="600"
+            letterSpacing="2px"
+            my="1em"
+            textTransform="uppercase"
+          >
+            1 of 4
+          </Text>
           <legend>
             <Header
               fontSize="2em"
@@ -51,16 +85,17 @@ export default function Register() {
           my="2em"
         >
           <PrimaryButton text={"Continue"} route={"/"} />
-          <Text
+          <Link
             color="lightgrey"
             fontSize=".9em"
             fontWeight="600"
             letterSpacing="2px"
             my="1em"
             textTransform="uppercase"
+            onClick={setAllOptions}
           >
             Skip
-          </Text>
+          </Link>
         </Box>
       </Flex>
     </>

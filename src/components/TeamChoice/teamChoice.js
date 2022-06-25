@@ -3,11 +3,10 @@ import { Text, Flex } from "@chakra-ui/react";
 import { Checkbox } from "@chakra-ui/react";
 
 const TeamChoice = ({ team, handleCheckbox }) => {
-
   return (
     <>
       <Flex
-        my="1em"
+        my="1.5em"
         px="1em"
         py=".2em"
         borderRadius="25px"
@@ -25,11 +24,20 @@ const TeamChoice = ({ team, handleCheckbox }) => {
           </Text>
         </Flex>
         <Flex>
-          <Checkbox
-            size="lg"
-            color="#53DB68"
-            onChange={() => handleCheckbox(team)}
-          />
+          {team !== "Arsenal" ? (
+            <Checkbox
+              size="lg"
+              isDisabled
+              color="#53DB68"
+              onChange={() => handleCheckbox(team)}
+            />
+          ) : (
+            <Checkbox
+              size="lg"
+              color="#53DB68"
+              onChange={() => handleCheckbox(team)}
+            />
+          )}
         </Flex>
       </Flex>
     </>
