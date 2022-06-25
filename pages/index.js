@@ -23,20 +23,20 @@ export default function Home() {
               fontSize={{ base: "1.8em", md: "4em" }}
               text="It's your guide&nbsp;"
               fontWeight="400"
-              colour="#403f3f"
+              colour="#2c2c2c"
             />
             <Flex display="flex" flexDirection="row">
               <Header
                 fontSize={{ base: "1.8em", md: "4em" }}
                 text="to&nbsp;"
                 fontWeight="400"
-                colour="#403f3f"
+                colour="#2c2c2c"
               />
               <Header
                 fontSize={{ base: "1.8em", md: "4em" }}
                 text="football parlance."
                 fontWeight="800"
-                colour="#403f3f"
+                colour="#2c2c2c"
               />
             </Flex>
           </Flex>

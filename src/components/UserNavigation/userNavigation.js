@@ -9,11 +9,10 @@ import {
   Menu,
   MenuButton,
   MenuDivider,
-  IconButton,
 } from "@chakra-ui/react";
-import { HamburgerIcon, AddIcon } from "@chakra-ui/icons";
 import { useUser } from "@auth0/nextjs-auth0";
 import Link from "next/link";
+import UserIcon from "../UserIcon/userIcon";
 
 const UserNavigation = () => {
   const { user } = useUser();
@@ -53,15 +52,16 @@ const UserNavigation = () => {
         </Flex>
       ) : (
         <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label="Options"
-            icon={<HamburgerIcon />}
-            bg="none"
-          />
+          <MenuButton aria-label="Options">
+            <Flex alignItems="center" display="flex" flexDirection="row">
+              <Box mx="1em">
+                <UserIcon src={user.picture} alt={user.name} />
+              </Box>
+            </Flex>
+          </MenuButton>
           <MenuList>
             <MenuItem
-              color="#403f3f"
+              color="#B0B0B0"
               fontSize={".8em"}
               fontWeight="700"
               letterSpacing=".4px"
@@ -69,12 +69,23 @@ const UserNavigation = () => {
               Profile
             </MenuItem>
             <MenuItem
-              color="#403f3f"
+              color="#B0B0B0"
               fontSize={".8em"}
               fontWeight="700"
               letterSpacing=".4px"
             >
               User Settings
+            </MenuItem>
+            <MenuDivider />
+            <MenuItem
+              color="#B0B0B0"
+              fontSize={".8em"}
+              fontWeight="400"
+              letterSpacing=".4px"
+            >
+              <Link href={"/api/auth/logout"} textDecoration="none">
+                Sign out
+              </Link>
             </MenuItem>
           </MenuList>
         </Menu>
