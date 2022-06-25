@@ -1,6 +1,7 @@
 import { Flex, Box } from "@chakra-ui/react";
 import { useUser } from "@auth0/nextjs-auth0";
 import PrimaryButton from "../src/components/Buttons/PrimaryButton/primaryButton";
+import SecondaryButton from "../src/components/Buttons/SecondaryButton/secondaryButton";
 import Header from "../src/components/Text/Header/header";
 
 export default function Home() {
@@ -14,38 +15,46 @@ export default function Home() {
         justifyContent="center"
         w="100%"
         h={"calc(100vh - 8em)"}
-        flexDirection={{ base: "column", md: "column" }}
+        flexDirection={{ base: "column", md: "row" }}
       >
-        <Flex flexDirection={"column"} mb="1em">
-          <Header
-            fontSize={{ base: "1.8em", md: "4em" }}
-            text="It's your guide&nbsp;"
-            fontWeight="400"
-            color="#333232"
-          />
-          <Flex display="flex" flexDirection="row">
+        <Flex
+          flexDirection={"row"}
+          mb="1em"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Flex flexDirection={"column"}>
             <Header
               fontSize={{ base: "1.8em", md: "4em" }}
-              text="to&nbsp;"
+              text="It's your guide&nbsp;"
               fontWeight="400"
               color="#333232"
             />
-            <Header
-              fontSize={{ base: "1.8em", md: "4em" }}
-              text="football parlance."
-              fontWeight="800"
-              color="#333232"
-            />
+            <Flex display="flex" flexDirection="row">
+              <Header
+                fontSize={{ base: "1.8em", md: "4em" }}
+                text="to&nbsp;"
+                fontWeight="400"
+                color="#333232"
+              />
+              <Header
+                fontSize={{ base: "1.8em", md: "4em" }}
+                text="football parlance."
+                fontWeight="800"
+                color="#333232"
+              />
+            </Flex>
           </Flex>
-          <Box mt={{ base: "2em", md: "3.5em" }} alignSelf="center">
-            <PrimaryButton text={"Start"} size={"md"} route={"/feed"} />
+          <Box display="flex" flexDirection="column" h="100%" mx="2em" p="2em">
+            <Box my=".5em">
+              <PrimaryButton text={"GET STARTED"} route={"/register"} />
+            </Box>
+            <Box my=".5em">
+              <SecondaryButton text={"JUMP BACK IN"} route={"/feed"} />
+            </Box>
           </Box>
         </Flex>
-        {!user ? (
-          <a href="/api/auth/login">Login</a>
-        ) : (
-          <a href="/api/auth/logout">Log out</a>
-        )}
+        <a href="/api/auth/logout">log out</a>
       </Flex>
     </>
   );

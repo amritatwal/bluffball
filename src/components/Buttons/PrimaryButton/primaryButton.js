@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 
-const PrimaryButton = ({ text, size, route }) => {
+const PrimaryButton = ({ text, route }) => {
   return (
     <>
       <Link href={route}>
@@ -12,7 +12,7 @@ const PrimaryButton = ({ text, size, route }) => {
           _hover={"none"}
           py="1em"
           px={{ base: "1.3em", md: "3em" }}
-          size={size}
+          w={{ base: "6em", md: "12em" }}
           color="#FFFFFF"
           borderRadius="25px"
           border="none"

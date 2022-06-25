@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 
-const SecondaryButton = ({ text, size, route }) => {
+const SecondaryButton = ({ text, route }) => {
   return (
     <>
       <Button
@@ -13,9 +13,9 @@ const SecondaryButton = ({ text, size, route }) => {
         color="#333232"
         borderRadius="25px"
         letterSpacing="1px"
-        size={size}
         textTransform="uppercase"
-      >ƒ
+        w={{ base: "6em", md: "12em" }}
+      >
         <Link href={route}>{text}</Link>
       </Button>
     </>

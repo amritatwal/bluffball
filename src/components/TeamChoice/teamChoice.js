@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, Flex } from "@chakra-ui/react";
-// import css from "./teamChoice.module.css";
 import { Checkbox } from "@chakra-ui/react";
 
-const TeamChoice = ({ team }) => {
+const TeamChoice = ({ team, handleCheckbox }) => {
+
   return (
     <>
       <Flex
@@ -25,7 +25,11 @@ const TeamChoice = ({ team }) => {
           </Text>
         </Flex>
         <Flex>
-          <Checkbox size="lg" iconColor="#53DB68" />
+          <Checkbox
+            size="lg"
+            color="#53DB68"
+            onChange={() => handleCheckbox(team)}
+          />
         </Flex>
       </Flex>
     </>
