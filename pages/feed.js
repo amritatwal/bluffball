@@ -17,7 +17,7 @@ const Feed = () => {
 
   return (
     <>
-      <Box h={"calc(100vh - 8em)"} display="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column">
         <Flex m=".8em" alignSelf={"flex-end"}>
           <Button
             bg="none"
@@ -38,12 +38,7 @@ const Feed = () => {
         </Flex>
         {phrases.length > 1 ? (
           <>
-            <Box
-              display="flex"
-              mt={{ md: "4em" }}
-              alignItems="center"
-              justifyContent="center"
-            >
+            <Box display="flex" alignItems="center" justifyContent="center">
               <Carousel phrases={phrases} />
             </Box>
           </>

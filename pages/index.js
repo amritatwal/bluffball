@@ -1,17 +1,10 @@
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Header from "../src/components/Text/Header/header";
 
 export default function Landing() {
   return (
     <>
-      <Flex
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        w="100%"
-        h={"calc(100vh - 8em)"}
-        flexDirection={{ base: "column", md: "row" }}
-      >
+      <Flex display="flex" alignItems="center" justifyContent="center" w="100%">
         <Flex
           flexDirection={"row"}
           mb="1em"

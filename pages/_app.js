@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import Navbar from "../src/components/Navigation/Navbar";
 import theme from "../customTheme";
 import "@fontsource/poppins";
@@ -11,7 +11,12 @@ function App({ pageProps, Component }) {
       <UserProvider>
         <ChakraProvider theme={theme}>
           <Navbar />
-          <Component {...pageProps} theme={theme} />
+          <Box
+            my={{ base: ".5em", md: "3em" }}
+            mx={{ base: "1em", md: "20em" }}
+          >
+            <Component {...pageProps} theme={theme} />
+          </Box>
         </ChakraProvider>
       </UserProvider>
     </div>
