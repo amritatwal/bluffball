@@ -16,7 +16,7 @@ import UserIcon from "../UserIcon/userIcon";
 
 const UserNavigation = () => {
   const { user } = useUser();
-  console.log(user);
+
   return (
     <Flex>
       {!user ? (
@@ -55,7 +55,14 @@ const UserNavigation = () => {
           <MenuButton aria-label="Options">
             <Flex alignItems="center" display="flex" flexDirection="row">
               <Box mx="1em">
-                <UserIcon src={user.picture} alt={user.name} />
+                {user.picture ? (
+                  <UserIcon src={user.picture} alt={user.name} />
+                ) : (
+                  <UserIcon
+                    src={"https://i.ibb.co/xMpZVyP/Surface-Pro-8-1.png"}
+                    alt={user.name}
+                  />
+                )}
               </Box>
             </Flex>
           </MenuButton>
