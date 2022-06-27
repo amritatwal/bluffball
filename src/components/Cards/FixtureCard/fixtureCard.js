@@ -11,7 +11,7 @@ const Fixture = ({
   homeTeamLogo,
 }) => {
   // Format the date accordingly.
-  const time = new Date(date).toString().slice(17, 21);
+  const time = new Date(date).toLocaleString().slice(12, 17);
   const month = new Date(date).toString().slice(4, 7);
   const day = new Date(date).toString().slice(8, 11);
   return (
@@ -43,7 +43,7 @@ const Fixture = ({
           {day}
           {month}
         </Text>
-        <Text>2{time}</Text>
+        <Text>{time}</Text>
       </Box>
       <Box display="flex" flexDirection="column" w="100%">
         <Box
