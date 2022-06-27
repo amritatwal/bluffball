@@ -82,11 +82,12 @@ export default function Register() {
         <Box
           alignItems="center"
           display="flex"
+          fontWeight="600"
           flexDirection="column"
           justifyContent="center"
           my="2em"
         >
-          <PrimaryButton text={"Let's go"} route={"/feed"} />
+          <PrimaryButton text={"Let's go!"} route={"/feed"} />
           <Link
             color="lightgrey"
             fontSize=".9em"

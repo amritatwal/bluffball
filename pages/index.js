@@ -1,7 +1,7 @@
 import { Flex, Box } from "@chakra-ui/react";
 import Header from "../src/components/Text/Header/header";
 
-export default function Home() {
+export default function Landing() {
   return (
     <>
       <Flex

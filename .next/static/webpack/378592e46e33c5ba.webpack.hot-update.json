@@ -1,0 +1,1 @@
+{"c":["webpack"],"r":["pages/register"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2FUsers%2Famritatwal%2FDesktop%2Fbluffball%2Fpages%2Fregister.js&page=%2Fregister!","./pages/register.js","./src/components/Buttons/PrimaryButton/primaryButton.js","./src/components/TeamChoice/teamChoice.js","./src/lib/teams.js"]}
