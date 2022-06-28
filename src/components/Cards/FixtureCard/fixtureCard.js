@@ -21,23 +21,23 @@ const Fixture = ({
       display="flex"
       flexDirection="row"
       color="#4C4C4C"
-      h={{ base: "3em", md: "10em" }}
+      h={{ base: "3em", sm: "7em", md: "10em" }}
       mr={{ base: ".5em", md: "1em" }}
-      maxW={{ base: "4em", md: "25em" }}
-      w={{ base: "4em", md: "20em" }}
+      maxW={{ base: "25em", sm: "16em", md: "25em" }}
+      w={{ base: "12em", sm: "16em", md: "23em" }}
     >
       <Box
         alignItems="center"
         borderRight={"solid 1px #EBEBEB"}
         display="flex"
         flexDirection="column"
-        fontSize={{ base: ".6em", md: "1.1em" }}
+        fontSize={{ base: "1em", md: "1.2em" }}
         fontWeight="800"
         justifyContent="center"
-        my={{ base: ".1em", md: ".3em" }}
-        px={{ base: ".2em" }}
+        my={{ base: ".2em", md: ".3em" }}
+        px={{ base: ".7em" }}
         textTransform="uppercase"
-        w={{ base: "3em", md: "6em" }}
+        w={{ base: "8em", md: "8em" }}
       >
         <Text>
           {day}
@@ -52,10 +52,10 @@ const Fixture = ({
           display="flex"
           flexGrow="1"
           flexDirection="column"
-          fontSize={{ base: ".5em", md: "1em" }}
+          fontSize={{ base: ".8em", md: "1em" }}
           fontWeight="800"
           justifyContent="center"
-          mx={{ base: ".1em", md: ".3em" }}
+          mx={{ base: "1em", md: "1.2em" }}
           px={{ base: ".5em", md: "1.3em" }}
         >
           <Box
@@ -66,11 +66,11 @@ const Fixture = ({
           >
             <Image
               alt="home team logo"
-              h={{ base: ".5em", md: "1.1em" }}
+              h="1.1em"
               src={homeTeamLogo}
-              w={{ base: ".5em", md: "1.1em" }}
+              w="1.1em"
             />
-            <Text mx={{ base: ".1em", md: ".4em" }}>{homeTeam}</Text>
+            <Text mx={{ base: ".4em", md: ".4em" }}>{homeTeam}</Text>
           </Box>
           <Box
             alignItems="center"
@@ -80,21 +80,21 @@ const Fixture = ({
           >
             <Image
               alt="home team logo"
-              h={{ base: ".5em", md: "1.1em" }}
+              h="1.1em"
               src={awayTeamLogo}
-              w={{ base: ".5em", md: "1.1em" }}
+              w="1.1em"
             />
-            <Text mx={{ base: ".1em", md: ".4em" }}>{awayTeam}</Text>
+            <Text mx={{ base: ".4em", md: ".4em" }}>{awayTeam}</Text>
           </Box>
         </Box>
         <Box
           alignItems="center"
           color="#BCBCBC"
-          fontSize={{ base: ".4em", md: ".8em" }}
+          fontSize={{ base: ".6em", md: ".8em" }}
           fontWeight="600"
           display="flex"
           justifyContent="center"
-          py={{ base: ".5em", md: "1em" }}
+          py={{ base: ".8em", md: "1em" }}
           w="100%"
         >
           <Text>{`${venue}, ${city}`}</Text>

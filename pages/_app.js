@@ -12,8 +12,8 @@ function App({ pageProps, Component }) {
         <ChakraProvider theme={theme}>
           <Navbar />
           <Box
-            my={{ base: ".5em", md: "3em" }}
-            mx={{ base: "1em", md: "20em" }}
+            my={{ base: ".5em", sm: "2em", md: "1em" }}
+            mx={{ base: "1em", sm: "3em", md: "10em" }}
           >
             <Component {...pageProps} theme={theme} />
           </Box>

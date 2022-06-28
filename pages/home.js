@@ -1,30 +1,10 @@
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Text, useDisclosure } from "@chakra-ui/react";
+import React from "react";
 import Fixture from "../src/components/Cards/FixtureCard/fixtureCard";
-import Header from "../src/components/Text/Header/header";
-
-const someData = [
-  {
-    date: "2022-08-05T19:00:00+00:00",
-    venue: "Selhurst Park",
-    city: "London",
-    awayTeam: "Chelsea",
-    awayTeamLogo: "https://media.api-sports.io/football/teams/42.png",
-    homeTeam: "Liverpool",
-    homeTeamLogo: "https://media.api-sports.io/football/teams/42.png",
-  },
-  {
-    date: "2022-08-05T19:00:00+00:00",
-    venue: "Selhurst Park",
-    city: "London",
-    awayTeam: "Chelsea",
-    awayTeamLogo: "https://media.api-sports.io/football/teams/42.png",
-    homeTeam: "Liverpool",
-    homeTeamLogo: "https://media.api-sports.io/football/teams/42.png",
-  },
-];
+import LaunchModal from "../src/components/Modals/LaunchModal/launchModal";
 
 export default function Home({ fixtures }) {
-  console.log(fixtures);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Flex
@@ -33,6 +13,7 @@ export default function Home({ fixtures }) {
         flexDirection="column"
         w="100%"
       >
+        <LaunchModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         <Box alignItems="center" display="flex" flexDirection="row">
           <Text
             fontSize="1.2em"
@@ -46,7 +27,7 @@ export default function Home({ fixtures }) {
           <Box ml={{ base: ".8em", md: "1.5em" }}>
             <Text
               color="#53DB68"
-              fontSize={{ base: ".4em", md: ".8em" }}
+              fontSize={{ base: ".6em", md: ".8em" }}
               fontWeight="700"
               textTransform="uppercase"
             >
@@ -55,19 +36,6 @@ export default function Home({ fixtures }) {
           </Box>
         </Box>
         <Box display="flex" flexDirection="row" my="2em">
-          {/* {someData.map((fixture) => {
-            return (
-              <Fixture
-                date={fixture.date}
-                venue={fixture.venue}
-                city={fixture.city}
-                awayTeam={fixture.awayTeam}
-                homeTeam={fixture.homeTeam}
-                awayTeamLogo={fixture.awayTeamLogo}
-                homeTeamLogo={fixture.homeTeamLogo}
-              />
-            );
-          })} */}
           {fixtures.map((fixture) => {
             return (
               <Fixture
