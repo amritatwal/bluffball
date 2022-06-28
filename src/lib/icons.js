@@ -8,7 +8,7 @@ const icons = [
     src: "https://svgshare.com/i/iQ0.svg",
   },
   {
-    club: "Tottenham hotspur",
+    club: "Tottenham Hotspur",
     src: "https://svgshare.com/i/iNg.svg",
   },
   {

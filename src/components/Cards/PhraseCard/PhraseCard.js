@@ -39,7 +39,7 @@ const PhraseCard = ({ quote, club }) => {
               fontSize={{ base: "1.6em", md: "3em" }}
               text={quote}
               fontWeight="600"
-              colour="#333232"
+              colour="#494949"
             />
           </Flex>
           <Box

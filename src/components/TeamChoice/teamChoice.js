@@ -1,31 +1,47 @@
 import React from "react";
-import { Text, Flex } from "@chakra-ui/react";
-// import css from "./teamChoice.module.css";
+import { Text, Flex, Image } from "@chakra-ui/react";
 import { Checkbox } from "@chakra-ui/react";
+import icons from "../../lib/icons";
 
-const TeamChoice = ({ team }) => {
+const TeamChoice = ({ team, handleCheckbox }) => {
+  const icon = icons.find((icon) => icon.club === team);
   return (
     <>
       <Flex
-        my="1em"
+        alignItems="center"
+        border={"solid 1px #e1e1e1"}
+        borderRadius="25px"
+        my="1.5em"
         px="1em"
         py=".2em"
-        borderRadius="25px"
-        border={"solid 1px #e1e1e1"}
         w={{ md: "40em" }}
       >
+        {icon ? <Image mr=".5em" w="1.5em" h="1.5em" src={icon.src} /> : <></>}
         <Flex flexGrow={1}>
           <Text
             fontSize="1.4em"
             fontWeight="600"
-            color="#333232"
+            color="#494949"
             letterSpacing="1px"
           >
             {team}
           </Text>
         </Flex>
         <Flex>
-          <Checkbox size="lg" iconColor="#53DB68" />
+          {team !== "Arsenal" ? (
+            <Checkbox
+              size="lg"
+              isDisabled
+              color="#53DB68"
+              onChange={() => handleCheckbox(team)}
+            />
+          ) : (
+            <Checkbox
+              size="lg"
+              color="#53DB68"
+              onChange={() => handleCheckbox(team)}
+            />
+          )}
         </Flex>
       </Flex>
     </>
