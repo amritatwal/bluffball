@@ -73,6 +73,16 @@ const UserNavigation = () => {
               fontWeight="700"
               letterSpacing=".4px"
             >
+              <Link href={"/home"} textDecoration="none">
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem
+              color="#B0B0B0"
+              fontSize={".8em"}
+              fontWeight="700"
+              letterSpacing=".4px"
+            >
               Profile
             </MenuItem>
             <MenuItem

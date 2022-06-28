@@ -2,7 +2,8 @@ import React from "react";
 import { Flex, Image, Box } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
-import UserNavigation from "../UserNavigation/userNavigation"
+import UserNavigation from "../UserNavigation/userNavigation";
+import PrimaryButton from "../Buttons/PrimaryButton/primaryButton";
 
 const Navbar = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -47,8 +48,9 @@ const Navbar = () => {
               />
             </Box>
           </Link>
-          <Box display="flex" px="1em">
-            <UserNavigation/>
+          <Box alignItems="center" display="flex" px="1em">
+            <UserNavigation />
+            <PrimaryButton text={"CONTINUE LEARNING"} route={"/feed"} />
           </Box>
         </Flex>
       )}

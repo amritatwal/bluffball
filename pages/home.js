@@ -12,6 +12,7 @@ export default function Home({ fixtures }) {
         h={"calc(100vh - 8em)"}
         flexDirection="column"
         w="100%"
+        mt={{ base: "1em", md: "3em" }}
       >
         <LaunchModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         <Box alignItems="center" display="flex" flexDirection="row">

@@ -17,10 +17,11 @@ export default function Landing() {
           display="flex"
           flexDirection="column"
           my="3em"
+          px={{ base: "3em", md: "0em" }}
           w={{ base: "40em", md: "60em" }}
         >
           <Header
-            fontSize={{ base: "2em", md: "4em" }}
+            fontSize={{ base: "2.2em", md: "4em" }}
             fontWeight="800"
             colour="#494949"
             text={"Learn how to talk the talk."}
@@ -46,12 +47,14 @@ export default function Landing() {
           textAlign="center"
         >
           <Box
+            bg="#f9f9f9"
             borderRadius="12px"
             display="flex"
-            h={{ base: "10em", md: "18em" }}
+            h={{ base: "16em", md: "18em" }}
             flexDirection="column"
-            w={{ base: "10em", md: "25em" }}
+            w={{ base: "21em", md: "25em" }}
             mx="2em"
+            mb={{ base: "2em", md: "0em" }}
             px="2em"
           >
             <Text
@@ -68,11 +71,13 @@ export default function Landing() {
             </Text>
           </Box>
           <Box
+            bg="#f9f9f9"
             borderRadius="12px"
             display="flex"
-            h={{ base: "10em", md: "18em" }}
+            h={{ base: "16em", md: "18em" }}
             flexDirection="column"
-            w={{ base: "10em", md: "25em" }}
+            w={{ base: "21em", md: "25em" }}
+            mb={{ base: "2em", md: "0em" }}
             mx="2em"
             px="2em"
           >
@@ -87,15 +92,17 @@ export default function Landing() {
             <Text color="#A0A0A0" my="1em">
               It’s our job to help you sound like you know your stuff when you
               don’t. You’ll have access to results, upcoming fixtures and a
-              whole library of football players to bluff about.
+              library of football players.
             </Text>
           </Box>
           <Box
+            bg="#f9f9f9"
             borderRadius="12px"
             display="flex"
-            h={{ base: "10em", md: "18em" }}
+            h={{ base: "16em", md: "18em" }}
             flexDirection="column"
-            w={{ base: "10em", md: "25em" }}
+            w={{ base: "21em", md: "25em" }}
+            mb={{ base: "2em", md: "0em" }}
             mx="2em"
             px="2em"
           >

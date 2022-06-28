@@ -21,7 +21,7 @@ const TeamChoice = ({ team, handleCheckbox }) => {
           <Text
             fontSize="1.4em"
             fontWeight="600"
-            color="#333232"
+            color="#494949"
             letterSpacing="1px"
           >
             {team}
