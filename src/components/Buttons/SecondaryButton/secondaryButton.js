@@ -12,7 +12,7 @@ const SecondaryButton = ({ text, route }) => {
         border="2px"
         borderColor="#53DB68"
         color="#5a5858"
-        borderRadius="25px"
+        borderRadius="12px"
         letterSpacing="1px"
         textTransform="uppercase"
         w={{ base: "6em", md: "12em" }}

@@ -9,12 +9,10 @@ const PrimaryButton = ({ text, route }) => {
         <Button
           fontSize=".8em"
           fontFamily="Poppins"
-          bg="#53DB68"
+          bg="#E5FFE9"
           _hover={"none"}
-          // px={{ base: "1.3em", md: "3em" }}
-          // w={{ base: "6em", md: "12em" }}
-          color="#FFFFFF"
-          borderRadius="25px"
+          color="#53DB68"
+          borderRadius="12px"
           border="none"
           letterSpacing="2px"
           textTransform="uppercase"
