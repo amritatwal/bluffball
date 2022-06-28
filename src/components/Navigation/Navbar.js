@@ -1,11 +1,13 @@
 import React from "react";
-import { Flex, Image, Box } from "@chakra-ui/react";
+import { Flex, Image, Box, Text } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import UserNavigation from "../UserNavigation/userNavigation";
 import PrimaryButton from "../Buttons/PrimaryButton/primaryButton";
+import { useUser } from "@auth0/nextjs-auth0";
 
 const Navbar = () => {
+  const { user } = useUser();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
@@ -50,6 +52,20 @@ const Navbar = () => {
           </Link>
           <Box alignItems="center" display="flex" px="1em">
             <UserNavigation />
+            {user ? (
+              <Text
+                color="#A0A0A0"
+                fontSize={{ base: ".8em", md: ".8em" }}
+                fontWeight="800"
+                letterSpacing="1.5px"
+                textTransform="uppercase"
+                pr={"1em"}
+              >
+                Hey, {user.given_name}
+              </Text>
+            ) : (
+              <></>
+            )}
             <PrimaryButton text={"CONTINUE LEARNING"} route={"/feed"} />
           </Box>
         </Flex>

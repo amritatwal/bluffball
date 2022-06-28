@@ -1,4 +1,4 @@
-import { Flex, Text, Box } from "@chakra-ui/react";
+import { Flex, Text, Box, Image } from "@chakra-ui/react";
 import PrimaryButton from "../src/components/Buttons/PrimaryButton/primaryButton";
 import Header from "../src/components/Text/Header/header";
 
@@ -8,46 +8,49 @@ export default function Landing() {
       <Flex
         alignItems="center"
         display="flex"
-        flexDirection="column"
+        flexDirection={{ base: "column", md: "column", lg: "row" }}
         h={"calc(100vh - 8em)"}
         w="100%"
       >
-        <Box
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          my="3em"
-          px={{ base: "3em", md: "0em" }}
-          w={{ base: "40em", md: "60em" }}
-        >
-          <Header
-            fontSize={{ base: "2.2em", md: "4em" }}
-            fontWeight="800"
-            colour="#494949"
-            text={"Learn how to talk the talk."}
-          />
-          <Text
-            color="#A0A0A0"
-            fontSize={{ base: ".8em", md: "1.1em" }}
-            textAlign="center"
-            py="1em"
-          >
-            Are you sick of feeling out of the loop? Don't get left out of the
-            conversations. Impress your friends and colleagues with Bluffball's
-            handy phrases. Go on and let Bluffball help transform yourself into
-            the football expert you want your mates to think you are.
-          </Text>
-          <Box mt={{ base: ".5em", md: "1em" }}>
-            <PrimaryButton text={"Get started"} route={"/feed"} />
-          </Box>
-        </Box>
         <Flex
-          flexDirection={{ base: "column", md: "row" }}
-          mt={{ base: "2em", md: "3em" }}
-          textAlign="center"
+          w="100%"
+          h="100%"
+          p="2em"
+          justifyContent="flex-end"
+          flexDirection="column"
         >
           <Box
-            bg="#f9f9f9"
+            alignItems="flex-start"
+            display="flex"
+            flexDirection="column"
+            my="1em"
+            px={{ base: "3em", md: "0em" }}
+            w={{ base: "20m", md: "40em" }}
+          >
+            <Header
+              fontSize={{ base: "2.2em", md: "4em" }}
+              fontWeight="800"
+              colour="#494949"
+              text={"Learn how to talk the talk."}
+            />
+            <Text
+              color="#A0A0A0"
+              fontSize={{ base: ".8em", md: "1.1em" }}
+              fontWeight="800"
+              py="1em"
+            >
+              Are you sick of feeling out of the loop when it comes to football?
+              Impress your friends and colleagues with Bluffball's handy
+              phrases. Let Bluffball help transform yourself into the football
+              expert you want your mates to think you are.
+            </Text>
+            <Box mt={{ base: ".5em", md: "1em" }}>
+              <PrimaryButton text={"Get started"} route={"/feed"} />
+            </Box>
+          </Box>
+        </Flex>
+        <Flex w="100%" h="100%" alignItems="center" flexDirection="column">
+          <Box
             borderRadius="12px"
             display="flex"
             h={{ base: "16em", md: "18em" }}
@@ -66,12 +69,12 @@ export default function Landing() {
               Build your conversation skills.
             </Text>
             <Text color="#A0A0A0" my="1em">
-              Bluffball is updated daily with phrases and our pronunciation
-              guide offers you audio transcriptions so you can sound like a pro.
+              Bluffball is updated daily with phrases, and our nifty
+              pronunciation guide offers you audio transcriptions so you can
+              sound like a pro.
             </Text>
           </Box>
           <Box
-            bg="#f9f9f9"
             borderRadius="12px"
             display="flex"
             h={{ base: "16em", md: "18em" }}
@@ -91,12 +94,11 @@ export default function Landing() {
             </Text>
             <Text color="#A0A0A0" my="1em">
               It’s our job to help you sound like you know your stuff when you
-              don’t. You’ll have access to results, upcoming fixtures and a
-              library of football players.
+              don’t. You’ll have access to results, upcoming fixtures and all
+              the stats on players you'll need.
             </Text>
           </Box>
           <Box
-            bg="#f9f9f9"
             borderRadius="12px"
             display="flex"
             h={{ base: "16em", md: "18em" }}

@@ -18,7 +18,7 @@ export default function Home({ fixtures }) {
         <Box alignItems="center" display="flex" flexDirection="row">
           <Text
             fontSize="1.2em"
-            color="#4C4C4C"
+            color="#494949"
             fontWeight="800"
             letterSpacing="2px"
             textTransform="uppercase"
