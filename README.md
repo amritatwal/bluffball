@@ -34,10 +34,22 @@ The API serving the application can be found [here](https://github.com/amritatwa
 
 ### Plan & Roadmap
 
-Jun 2022: First MVP achieved
-  - User can view phrases 
+Jun 2022: 
+
+  :white_check_mark: First MVP achieved
+  
+  :white_check_mark: User can view phrases
+  
+  :white_check_mark: User can be authenticated
+  
+  :white_check_mark: Set-up a registration and home page
+  
+  :white_check_mark: User can view upcoming fixtures on /home
 
 Next steps:
-  - Authenticate the user.
+  - List league standings on /home
+  
+  - Create a portal that contains data about players on /home
+  
   - Explore the issues surrounding the incorporation of a progress bar and its affect on the carousel.
 
