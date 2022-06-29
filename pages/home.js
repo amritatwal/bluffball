@@ -8,6 +8,7 @@ export default function Home({ fixtures }) {
   return (
     <>
       <Flex
+        alignItems={{ base: "center", md: "baseline" }}
         display="flex"
         h={"calc(100vh - 8em)"}
         flexDirection="column"
@@ -36,7 +37,11 @@ export default function Home({ fixtures }) {
             </Text>
           </Box>
         </Box>
-        <Box display="flex" flexDirection="row" my="2em">
+        <Box
+          display="flex"
+          flexDirection={{ base: "column", md: "row" }}
+          my="2em"
+        >
           {fixtures.map((fixture) => {
             return (
               <Fixture

@@ -22,6 +22,7 @@ const Fixture = ({
       flexDirection="row"
       color="#494949"
       h={{ base: "3em", sm: "7em", md: "10em" }}
+      my={{ base: "1em", md: "0em" }}
       mr={{ base: ".5em", md: "1em" }}
       maxW={{ base: "25em", sm: "16em", md: "25em" }}
       w={{ base: "12em", sm: "16em", md: "23em" }}
