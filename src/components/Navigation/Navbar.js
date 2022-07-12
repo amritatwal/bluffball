@@ -53,22 +53,24 @@ const Navbar = () => {
           <Box alignItems="center" display="flex" px="1em">
             <UserNavigation />
             {user ? (
-              <Text
-                color="#A0A0A0"
-                fontSize={{ base: ".8em", md: ".8em" }}
-                fontWeight="800"
-                letterSpacing="1.5px"
-                textTransform="uppercase"
-                pr={"1em"}
-              >
-                Hey, {user.given_name}
-              </Text>
+              <>
+                <Text
+                  color="#A0A0A0"
+                  fontSize={{ base: ".8em", md: ".8em" }}
+                  fontWeight="800"
+                  letterSpacing="1.5px"
+                  textTransform="uppercase"
+                  pr={"1em"}
+                >
+                  Hey, {user.given_name}
+                </Text>
+                <Box pl="1em">
+                  <PrimaryButton text={"CONTINUE LEARNING"} route={"/feed"} />
+                </Box>
+              </>
             ) : (
               <></>
             )}
-            <Box pl="1em">
-              <PrimaryButton text={"CONTINUE LEARNING"} route={"/feed"} />
-            </Box>
           </Box>
         </Flex>
       )}
