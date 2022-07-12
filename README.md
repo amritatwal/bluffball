@@ -45,7 +45,8 @@ Jun 2022:
   :white_check_mark: Set-up a registration and home page
   
   :white_check_mark: User can view upcoming fixtures on /home
-
+  
+ 
 Next steps:
   - List league standings on /home
   
