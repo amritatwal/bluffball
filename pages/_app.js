@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import Navbar from "../src/components/Navigation/Navbar";
 import theme from "../customTheme";
@@ -10,6 +11,9 @@ function App({ pageProps, Component }) {
     <div className="container">
       <UserProvider>
         <ChakraProvider theme={theme}>
+          <Head>
+            <link rel="shortcut icon" href="../public/favicon.ico" />
+          </Head>
           <Navbar />
           <Box
             my={{ base: ".5em", sm: "2em", md: "1em" }}

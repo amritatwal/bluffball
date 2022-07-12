@@ -66,7 +66,9 @@ const Navbar = () => {
             ) : (
               <></>
             )}
-            <PrimaryButton text={"CONTINUE LEARNING"} route={"/feed"} />
+            <Box pl="1em">
+              <PrimaryButton text={"CONTINUE LEARNING"} route={"/feed"} />
+            </Box>
           </Box>
         </Flex>
       )}
