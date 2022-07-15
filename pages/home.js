@@ -1,22 +1,63 @@
 import { Flex, Box, Text, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import Fixture from "../src/components/Cards/FixtureCard/fixtureCard";
-import LaunchModal from "../src/components/Modals/LaunchModal/launchModal";
+import LeagueTable from "../src/components/Cards/LeagueTable/leagueTable";
 
 export default function Home({ fixtures }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Flex
-        alignItems={{ base: "center", md: "baseline" }}
-        display="flex"
         h={"calc(100vh - 8em)"}
-        flexDirection="column"
         w="100%"
         mt={{ base: "1em", md: "3em" }}
+        flexDirection="row"
       >
-        <LaunchModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
-        <Box alignItems="center" display="flex" flexDirection="row">
+        <Flex
+          alignItems={{ base: "center", md: "baseline" }}
+          flexDirection="column"
+        >
+          <Box alignItems="center" display="flex" flexDirection="row">
+            <Text
+              fontSize="1.2em"
+              color="#494949"
+              fontWeight="800"
+              letterSpacing="2px"
+              textTransform="uppercase"
+            >
+              Upcoming Fixtures
+            </Text>
+            <Box ml={{ base: ".8em", md: "1.5em" }}>
+              <Text
+                color="#53DB68"
+                fontSize={{ base: ".6em", md: ".8em" }}
+                fontWeight="700"
+                textTransform="uppercase"
+              >
+                View all
+              </Text>
+            </Box>
+          </Box>
+          <Box
+            display="flex"
+            flexDirection={{ base: "column", md: "row" }}
+            my="2em"
+          >
+            {fixtures.map((fixture) => {
+              return (
+                <Fixture
+                  date={fixture.fixture.date}
+                  venue={fixture.fixture.venue.name}
+                  city={fixture.fixture.venue.city}
+                  awayTeam={fixture.teams.away.name}
+                  homeTeam={fixture.teams.home.name}
+                  awayTeamLogo={fixture.teams.away.logo}
+                  homeTeamLogo={fixture.teams.home.logo}
+                />
+              );
+            })}
+          </Box>
+        </Flex>
+        <Box>
           <Text
             fontSize="1.2em"
             color="#494949"
@@ -24,37 +65,9 @@ export default function Home({ fixtures }) {
             letterSpacing="2px"
             textTransform="uppercase"
           >
-            Upcoming Fixtures
+            FOOTBALL TABLE STANDINGS
           </Text>
-          <Box ml={{ base: ".8em", md: "1.5em" }}>
-            <Text
-              color="#53DB68"
-              fontSize={{ base: ".6em", md: ".8em" }}
-              fontWeight="700"
-              textTransform="uppercase"
-            >
-              View all
-            </Text>
-          </Box>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection={{ base: "column", md: "row" }}
-          my="2em"
-        >
-          {fixtures.map((fixture) => {
-            return (
-              <Fixture
-                date={fixture.fixture.date}
-                venue={fixture.fixture.venue.name}
-                city={fixture.fixture.venue.city}
-                awayTeam={fixture.teams.away.name}
-                homeTeam={fixture.teams.home.name}
-                awayTeamLogo={fixture.teams.away.logo}
-                homeTeamLogo={fixture.teams.home.logo}
-              />
-            );
-          })}
+          <LeagueTable />
         </Box>
       </Flex>
     </>
